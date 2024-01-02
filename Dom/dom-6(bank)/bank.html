@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <section class="container mx-auto p-6">
+        <h1 class="text-center font-bold text-4xl text-red-500 mt-5">Welcome To Your Personal Bank</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-11">
+            <!-- Top card - Deposit -->
+            <div class="card bg-green-400 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Deposit</h2>
+                    <p>$ <span>00</span></p>
+                </div>
+            </div>
+
+            <!-- Top card - Withdraw -->
+            <div class="card bg-rose-400 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Withdraw</h2>
+                    <p>$ <span>00</span></p>
+                </div>
+            </div>
+
+            <!-- Top card - Balance -->
+            <div class="card bg-amber-400 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Balance</h2>
+                    <p>$ <span>00</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second card - Deposit and Withdraw -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-11">
+            <div class="card bg-red-500 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Please Deposit</h2>
+                    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
+                    <div class="mt-4">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-green-600">Deposit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-blue-400 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Please Withdraw</h2>
+                    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
+                    <div class="mt-4">
+                        <button class="bg-cyan-300 text-white px-4 py-2 rounded transition duration-300 hover:bg-green-600">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

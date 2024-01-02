@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+</head>
+<body>
+       <section>
+              <div>
+                     <input id="input-field" type="text">
+                     <br>
+                     <button id="btn">Click here</button>
+              </div>
+              <div id="container">
+
+              </div>
+       </section>
+
+       <section>
+              <div>
+                     <input id="input-fields" type="text">
+                     <button id="delete-btn" disabled>Delete</button>
+              </div>
+       </section>
+
+       <script>
+              // first section
+            document.getElementById("btn").addEventListener("click", function(){
+              const inputField = document.getElementById("input-field")
+                    
+                     const inputValue = inputField.value;
+                    
+                     const containers = document.getElementById("container");
+                      const p = document.createElement("p");
+                     p.innerText = inputValue;
+                     containers.appendChild(p)
+                     inputField.value = "";
+            })
+
+       //      second-section
+       document.getElementById("input-fields").addEventListener("keyup", function(event){
+              const text = event.target.value;
+              const deleteBtn = document.getElementById("delete-btn")
+              if(text === "delete"){
+                     deleteBtn.removeAttribute("disabled")
+
+              }
+              else{
+                     deleteBtn.setAttribute("disabled", true)
+              }
+              
+       })
+
+       </script>
+</body>
+</html>

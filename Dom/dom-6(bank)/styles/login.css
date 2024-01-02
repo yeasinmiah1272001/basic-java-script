@@ -1,0 +1,36 @@
+
+
+.bank{
+       text-align: center;
+       font-size: 40px;
+       color: red;
+}
+.container{
+       /* border: 3px solid yellow; */
+       padding: 20px;
+       margin: auto;
+       /* margin-block: ; */
+       background-color: blueviolet;
+       height: 150px;
+       width: 600px;
+}
+.email{
+       margin-top: 25px;
+       width: 500px;
+       padding: 10px;
+       border-radius: 5px;
+}
+.password{
+       width: 500px;
+              padding: 10px;
+              border-radius: 5px;
+}
+.btn{
+       width: 100px;
+       width: 100px;
+       background-color: red;
+       border: none;
+       color: white;
+       padding: 3px;
+       border-radius: 5px;
+}
