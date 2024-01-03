@@ -15,7 +15,7 @@
             <div class="card bg-green-400 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Deposit</h2>
-                    <p>$ <span>00</span></p>
+                    <p>$ <span id="deposit-amount">00</span></p>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@
             <div class="card bg-rose-400 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Withdraw</h2>
-                    <p>$ <span>00</span></p>
+                    <p>$ <span id="Withdraw-amount">00</span></p>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
             <div class="card bg-amber-400 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Balance</h2>
-                    <p>$ <span>00</span></p>
+                    <p>$ <span id="balance-field">1240</span></p>
                 </div>
             </div>
         </div>
@@ -41,9 +41,9 @@
             <div class="card bg-red-500 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Please Deposit</h2>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
+                    <input id="deposit-field" type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
                     <div class="mt-4">
-                        <button class="bg-green-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-green-600">Deposit</button>
+                        <button id="btn-deposit" class="bg-green-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-green-600">Deposit</button>
                     </div>
                 </div>
             </div>
@@ -51,13 +51,15 @@
             <div class="card bg-blue-400 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Please Withdraw</h2>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
+                    <input id="wid-filed" type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
                     <div class="mt-4">
-                        <button class="bg-cyan-300 text-white px-4 py-2 rounded transition duration-300 hover:bg-green-600">Withdraw</button>
+                        <button id="wid-btn" class="bg-cyan-300 text-white px-4 py-2 rounded transition duration-300 hover:bg-green-600">Withdraw</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="deposit.js"></script>
 </body>
 </html>
+
