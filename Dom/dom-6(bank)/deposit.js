@@ -1,53 +1,42 @@
-
 document.getElementById("btn-deposit").addEventListener("click", function(){
-       const depositField = document.getElementById("deposit-field")
-       const newDepositAmountString= depositField.value;
-       const newDepositAmount = parseFloat(newDepositAmountString)
-       // console.log(depositAmount);
-       const depositTotalElement = document.getElementById("deposit-amount")
-       const PreviousDepositTotalString = depositTotalElement.innerText;
-       const PreviousDepositTotal = parseFloat(PreviousDepositTotalString)
-       const currentDepositTotal = PreviousDepositTotal + newDepositAmount
-       console.log(currentDepositTotal)
-       depositTotalElement.innerText = currentDepositTotal
+       // deposit-input
+       const depositInputFiled = document.getElementById("deposit-field")
+       const depositInputFiledString = depositInputFiled.value;
+       const newDepositInputFiled =  parseFloat(depositInputFiledString)
 
+       // deposit-p
+       const depositAmountElement = document.getElementById("deposit-amount")
+       const depositAmountString = depositAmountElement.innerText;
+       const previousAmount = parseFloat(depositAmountString)
+       const currentAmount = previousAmount + newDepositInputFiled;
+       depositAmountElement.innerText = currentAmount;
+       depositInputFiled.value = "";
 
-       depositField.value = "";
+       // balance-p
+        const balanceAmountElement = document.getElementById("balance-field")
+        const balanceAmountString = balanceAmountElement.innerText;
+        const previousBalanceAmount = parseFloat(balanceAmountString)
+        const currentBalanceAmount = previousBalanceAmount + currentAmount;
+        balanceAmountElement.innerText = currentBalanceAmount;
 
-      const depositBalanceElement = document.getElementById("balance-field")
-      const PreviousBalanceTotalString = depositBalanceElement.innerText;
-      console.log(PreviousBalanceTotalString)
-      const previousBalance = parseFloat(PreviousBalanceTotalString)
-
-      const newBalance = currentDepositTotal + previousBalance
-      depositBalanceElement.innerText = newBalance
 })
 
-// withdraw
- document.getElementById("wid-btn").addEventListener("click", function(){
-       // withdraw-inputFiled
-       const withdrawFiled = document.getElementById("wid-filed");
-       const newWithdrawAmountString = withdrawFiled.value;
-       const newWithdrawAmount = parseFloat(newWithdrawAmountString)
-       // console.log(newWithdrawAmountString)
-       // withdraw-h1?
-       const withdrawTotalElement = document.getElementById("Withdraw-amount")
-       const previousWithdrawTotalString = withdrawTotalElement.innerText;
-       const previousTotalWithdrawAmount = parseFloat(previousWithdrawTotalString)
-      const currentWithdrawAmountTotal = previousTotalWithdrawAmount + newWithdrawAmount;
-      withdrawTotalElement.innerText = currentWithdrawAmountTotal;
-
-//       balance-filed
-const depositBalanceElement = document.getElementById("balance-field")
-      const PreviousBalanceTotalString = depositBalanceElement.innerText;
-      console.log(PreviousBalanceTotalString)
-      const previousBalance = parseFloat(PreviousBalanceTotalString)
-
-      const newBalance = previousBalance - currentWithdrawAmountTotal;
-      depositBalanceElement.innerText = newBalance
-
-
-
-      withdrawFiled.value = "";
-
+// withdraw-section
+document.getElementById("wid-btn").addEventListener("click", function(){
+        const withdrawInputFiled = document.getElementById("wid-filed")
+       const withdrawInputFiledString = withdrawInputFiled.value;
+       const newWithdrawInputFiled =  parseFloat(withdrawInputFiledString)
+       // width-p
+        const withdrawAmountElement = document.getElementById("Withdraw-amount")
+       const withdrawAmountString = withdrawAmountElement.innerText;
+       const previousAmount = parseFloat(withdrawAmountString)
+       const currentAmount = previousAmount + newWithdrawInputFiled;
+       withdrawAmountElement.innerText = currentAmount;
+        withdrawInputFiled.value = "";
+       //  balance
+        const balanceAmountElement = document.getElementById("balance-field")
+        const balanceAmountString = balanceAmountElement.innerText;
+        const previousBalanceAmount = parseFloat(balanceAmountString)
+        const currentBalanceAmount = previousBalanceAmount - currentAmount;
+        balanceAmountElement.innerText = currentBalanceAmount;
 })
