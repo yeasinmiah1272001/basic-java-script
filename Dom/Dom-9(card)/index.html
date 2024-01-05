@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Personal Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="bg-gray-200 flex items-center justify-center h-screen gap-10">
+      <div class="max-w-md bg-white rounded-lg overflow-hidden shadow-md">
+        <!-- Product 1 -->
+        <img
+          class="w-28 h-32 object-cover mx-auto mt-3"
+          src="img/Best-5G-Mobile-Phones-Under-20000-In-India-(19th-August-50%-OFF-jhCUrWBzb4gURM.jpg"
+          alt="Product Image"
+        />
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-gray-800">Samsung f16</h2>
+          <p class="text-gray-600">$ <span id="price1">19.00</span></p>
+          <button onclick="handleMobile(19.00, 'price1', 'Samsung f16')"
+            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <!-- product-2 -->
+      <div class="max-w-md bg-white rounded-lg overflow-hidden shadow-md">
+        <!-- Product 1 -->
+        <img
+          class="w-28 h-32 object-cover mx-auto mt-3"
+          src="img/Buy-Samsung-Galaxy-A14-4GB-64GB-Light-Green-at-Best-Price-In-Fqk5ETuRvkOraM.jpg"
+          alt="Product Image"
+        />
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-gray-800">Oppo</h2>
+          <p class="text-gray-600">$ <span id="price1">38.00</span></p>
+          <button onclick="handleMobile(38.00, 'price1', 'Oppo')"
+            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div class="max-w-md bg-white rounded-lg overflow-hidden shadow-md">
+        <!-- Product 1 -->
+        <img
+          class="w-28 h-32 object-cover mx-auto mt-3"
+          src="img/Galaxy-Note-20-Ultra-Mockup-PSD-Stash-nnqVYP0Cuf1O5M.jpg"
+          alt="Product Image"
+        />
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-gray-800">Iphone 14 pro</h2>
+          <p class="text-gray-600">$ <span id="price1">100.00</span></p>
+          <button onclick="handleMobile(100.00, 'price1', 'Iphone 14 pro')"
+            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div class="max-w-md bg-white rounded-lg overflow-hidden shadow-md">
+        <!-- Product 1 -->
+        <img
+          class="w-28 h-32 object-cover mx-auto mt-3"
+          src="img/Samsung-Galaxy-A14-5G-(Dark-Red-8GB-128GB-Storage)-Triple-Rear-m3xk0zlPJrzhXM.jpg"
+          alt="Product Image"
+        />
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-gray-800">Readmi</h2>
+          <p class="text-gray-600">$ <span id="price1">25.00</span></p>
+          <button onclick="handleMobile(25.00, 'price1', 'Readmi')"
+            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <!-- Repeat similar structure for other products... -->
+
+      <!-- Total Price Display -->
+      <div class="max-w-md bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="p-14">
+          <h2 class="text-xl font-semibold text-gray-800">Product: <span id="product-name">-</span></h2>
+          <p class="text-gray-600 text-2xl">Total: $ <span id="total-price">0.00</span></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let totalPrice = 0;
+
+      function handleMobile(price, spanId, productName) {
+        totalPrice += price;
+        document.getElementById(spanId).innerText = price.toFixed(2);
+        document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+        document.getElementById('product-name').innerText = productName;
+        
+
+
+      }
+    </script>
+  </body>
+</html>
