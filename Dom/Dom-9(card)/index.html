@@ -40,8 +40,8 @@
         />
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800">Oppo</h2>
-          <p class="text-gray-600">$ <span id="price1">38.00</span></p>
-          <button onclick="handleMobile(38.00, 'price1', 'Oppo')"
+          <p class="text-gray-600">$ <span id="price2">38.00</span></p>
+          <button onclick="handleMobile(38.00, 'price2', 'Oppo')"
             class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           >
             Add to Cart
@@ -89,6 +89,7 @@
         <div class="p-14">
           <h2 class="text-xl font-semibold text-gray-800">Product: <span id="product-name">-</span></h2>
           <p class="text-gray-600 text-2xl">Total: $ <span id="total-price">0.00</span></p>
+          <p class="text-gray-600 text-2xl">Discount: $ <span id="discount-price">0.00</span></p>
         </div>
       </div>
     </section>
@@ -101,6 +102,9 @@
         document.getElementById(spanId).innerText = price.toFixed(2);
         document.getElementById('total-price').innerText = totalPrice.toFixed(2);
         document.getElementById('product-name').innerText = productName;
+        
+
+        // condition
         
 
 

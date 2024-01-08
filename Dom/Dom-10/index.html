@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Search</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        #searchInput {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Name Search</h2>
+
+    <label for="searchInput">Search by Name:</label>
+    <input type="text" id="searchInput" oninput="searchNames()" placeholder="Type a name">
+
+    <ul id="nameList">
+        <!-- Names will be dynamically added here -->
+    </ul>
+
+    <script>
+        // Sample list of names
+        var names = [
+            "John",
+            "Jane",
+            "Bob",
+            "Alice",
+            "Charlie",
+            "Diana",
+            // Add more names as needed
+        ];
+
+        // Function to filter and display names based on user input
+        function searchNames() {
+            var searchInput = document.getElementById('searchInput').value.toLowerCase();
+            var nameList = document.getElementById('nameList');
+            nameList.innerHTML = ''; // Clear previous results
+
+            for (var i = 0; i < names.length; i++) {
+                var name = names[i].toLowerCase();
+
+                // Check if the input string is present in the name
+                if (name.includes(searchInput)) {
+                    // Create a list item and append it to the list
+                    var listItem = document.createElement('li');
+                    listItem.textContent = names[i];
+                    nameList.appendChild(listItem);
+                }
+            }
+        }
+
+        // Initial display of all names
+        searchNames();
+    </script>
+
+</body>
+</html>

@@ -41,7 +41,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
           
           <!-- card-1 -->
-          <div onclick="handleProduct('card-title', 'price1')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
+          <div onclick="handleProduct(39.00, 'price1', 'K. Accessories')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
             <figure class="flex items-center p-10 bg-gray-100 rounded-xl">
               <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
             </figure>
@@ -59,7 +59,7 @@
           </div>
 
            <!-- card-2 -->
-          <div onclick="handleProduct('card-title', 'price2')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
+          <div onclick="handleProduct(25.00, 'price2', 'K. kccessories')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
            <figure class="flex items-center p-10 bg-gray-100 rounded-xl">
              <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
            </figure>
@@ -77,7 +77,7 @@
            </div>
 
            <!-- card-3 -->
-           <div onclick="handleProduct('card-title', 'price3')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
+           <div onclick="handleProduct(49.00, 'price3', 'Home Cooker')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
             <figure class="flex items-center p-10 bg-gray-100 rounded-xl">
               <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
             </figure>
@@ -101,7 +101,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
           
           <!-- card-4 -->
-          <div onclick="handleProduct('card-title', 'price4')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
+          <div onclick="handleProduct(49.00, 'price4', 'Sports Back Cap')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
             <figure class="flex items-center p-10 bg-gray-100 rounded-xl">
               <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
             </figure>
@@ -119,7 +119,7 @@
           </div>
 
            <!-- card-5 -->
-          <div onclick="handleProduct('card-title', 'price5')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
+          <div onclick="handleProduct(69.00, 'price5', 'Full Jersey Set')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
            <figure class="flex items-center p-10 bg-gray-100 rounded-xl">
              <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
            </figure>
@@ -137,7 +137,7 @@
            </div>
 
            <!-- card-6 -->
-           <div onclick="handleProduct('card-title', 'price6')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
+           <div onclick="handleProduct(159 ,'price6', 'Sports cates')" class="card bg-base-100 p-6 rounded-xl hover:cursor-pointer">
             <figure class="flex items-center p-10 bg-gray-100 rounded-xl">
               <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
             </figure>
@@ -167,6 +167,7 @@
         </div>
         <div class="p-6 pb-0 space-y-4 bg-white rounded-lg">
           <div id="product-list" class="border-b pb-5 text-lg font-semibold">
+            <p id="product-name"></p>
 
           </div>
           <div class="border-b pb-5 text-lg font-semibold">
@@ -194,15 +195,13 @@
     </div>
   </main>
   <script>
-    function handleProduct(productName, priceId) {
-  var totalPriceElement = document.getElementById("total-price");
-  var currentPrice = parseFloat(totalPriceElement.innerText);
-
-  //      card-price
-  var cardPrice = document.getElementById(priceId);
-  var price = parseFloat(cardPrice.innerText);
-  var totalPrice = currentPrice + price;
-  document.getElementById("total-price").innerText = totalPrice;
+    let totalPrice = 0;
+function handleProduct( price, spanId, productName) {
+  totalPrice += price;
+  document.getElementById(spanId).innerText = price.toFixed(2);
+  document.getElementById("total-price").innerText = totalPrice.toFixed(2);
+  document.getElementById("product-name").innerText = productName;
+  
 
 }
 
@@ -213,17 +212,3 @@
 </body>
 </html>
 
- // function updateTotalPrice(price,spanId){
-
-      //   var currentTotalPrice = document.getElementById("total-price")
-      //  var currentPrice = parseFloat(currentTotalPrice.innerText);
-      //   // console.log(currentPrice)
-      //   // card-price
-      //  var cardTotalPrice = document.getElementById(spanId);
-      //  var cardPrice = parseFloat(cardTotalPrice.innerText);
-      //   var totalPrice = currentPrice + cardPrice;
-      //   // console.log(totalPrice)
-
-      //   document.getElementById("total-price").innerText = totalPrice
-       
-      // }
